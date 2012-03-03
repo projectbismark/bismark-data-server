@@ -9,7 +9,7 @@ from django.http import HttpResponse
 node_id_matcher = re.compile(r'OW[0-9A-F]{12}$')
 
 uploader_modules = {
-    'active': None,
+    'active': 1 * 2**20,
     'bismark-updater': 10 * 2**20,
     'nazanin-traceroute': 10 * 2**20,
     'passive': 10 * 2**20,
