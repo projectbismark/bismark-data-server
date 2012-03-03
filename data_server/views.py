@@ -21,9 +21,8 @@ def upload(request):
     module = request.REQUEST['directory']
     if module not in uploader_modules:
         raise ValueError('Invalid module')
-    if uploader_modules[module] is not None \
-            and len(request.raw_post_data) > uploader_modules[module]:
-                raise ValueError('Upload is too big')
+    if len(request.raw_post_data) > uploader_modules[module]:
+        raise ValueError('Upload is too big')
     if node_id_matcher.match(request.REQUEST['node_id']) is None:
         raise ValueError('Invalid node id')
 
