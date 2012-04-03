@@ -12,6 +12,7 @@ uploader_modules = {
     'active': 1 * 2**20,
     'bismark-experiments-manager': 10 * 2**20,
     'bismark-updater': 10 * 2**20,
+    'mac-analyzer': 10 * 2**20,
     'nazanin-traceroute': 10 * 2**20,
     'passive': 10 * 2**20,
     'passive-frequent': 100 * 2**10,
