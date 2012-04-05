@@ -16,6 +16,7 @@ uploader_modules = {
     'nazanin-traceroute': 10 * 2**20,
     'passive': 10 * 2**20,
     'passive-frequent': 100 * 2**10,
+    'web100-test': 100 * 2**10,
     'wifi-beacons': 10 * 2**20,
 }
 
