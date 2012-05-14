@@ -1,5 +1,5 @@
 import errno
-from os import makedirs
+from os import fsync, makedirs
 from os.path import join, basename
 import re
 
@@ -37,6 +37,8 @@ def upload(request):
             raise
     handle = open(join(path, basename(request.REQUEST['filename'])), 'w')
     handle.write(request.raw_post_data)
+    handle.flush()
+    fsync(handle.fileno())
     handle.close()
 
     return HttpResponse('done')
